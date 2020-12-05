@@ -1,0 +1,13 @@
+1. run docker_env_create.sh script on local machine.
+2. This would create two containers names "streamTest" & "streamTestBindMount"
+3. To open a container in interactive mode run the command "docker exec -it {containerName} /bin/bash"
+4. After opening the container in interactive mode run the below commands
+    * apt-get update
+    * apt-get install wget git build-essential
+5. Now inside the container move to /app directory
+6. Now clone the four repositories https://github.com/Ankur19/{STREAM_Benchmark_Tests, HACC_IO_Benchmark_Tests, Redis_Benchmark_Tests, Measuring_IO_Overhead_in_Docker}
+7. Now move inside Measuring_IO_Overhead_in_Docker folder and run "install_mpi.sh" script
+8. Once that installation completes, move inside each benchmark folder and run the corresponding benchmarking scripts
+    * "streamScript.sh" for STREAM present inside STREAM_Benchmark_Tests/stream/FTP/Code/
+    * "haccScript.sh" for HACC IO present inside HACC_IO_Benchmark_Tests/
+    * "run_redis_benchmark.sh" for Redis benchmark present inside Redis_Benchmark_Tests/
